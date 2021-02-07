@@ -38,6 +38,8 @@ routes.post(
   SessionController.store
 );
 
+routes.get('/', (req, res) => res.json('ok'));
+
 routes.use(authMiddleware);
 
 routes.put('/users', validateUserUpdate, UserController.update);
